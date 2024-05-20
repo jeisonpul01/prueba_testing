@@ -23,7 +23,7 @@ public class TimeStepDefinitions {
 
 
     @Given("I'm on the Time Page")
-    public void ImOnTheTimePage() throws InterruptedException {
+    public void ImOnTheTimePage()  {
         timePage.TimeURL();
         loginPage.loginUser("Admin", "admin123");
     }
@@ -35,8 +35,7 @@ public class TimeStepDefinitions {
 
 
     @Then("I access the user's Time Sheet")
-    public void ComprobationDashboard() {
-
-
+    public void ComprobationTimePage() {
+        timePage.TimePage_TimesheetAssertions();
     }
 }
